@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PagesController@index');
+Route::get('consulting', 'PagesController@consulting');
+Route::get('training', 'PagesController@training');
+Route::get('contact', 'PagesController@contact');
+Route::post('contact', 'PagesController@store');
